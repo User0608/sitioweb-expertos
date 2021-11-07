@@ -41,11 +41,11 @@ export const HeaPage = () => {
         setPagina(p)
     }
     return (
-        <div>
+        <div className="container">
             <h1 className="text-center mb-3">Test HEA</h1>
             <div><p className="text-center">Pagina actual {pagina}</p></div>
             {Paginas(setPage)}
-            <div>
+            <div className="container">
                 {
                     preguntas?.map(p => (
                         <HeaQuestion
@@ -59,7 +59,7 @@ export const HeaPage = () => {
                     ))
                 }
             </div>
-            <div className="p-5 d-flex justify-content-center me-5">
+            <div className="p-5 d-flex justify-content-center">
                 <button className="btn btn-primary btn-bg" onClick={saveAs}>Guardar Respuestas</button>
             </div>
         </div>

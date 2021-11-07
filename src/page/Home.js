@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { deleteData } from '../service/deleteData';
 import { GetData } from '../service/getData';
 import { Link } from "react-router-dom";
+import '../css/global.css'
 export const Home = () => {
     const [user, setUser] = useState()
     let u = JSON.parse(localStorage.getItem("usuario"))
@@ -55,9 +56,8 @@ export const Home = () => {
                     {u?.nombre} {u?.apellido_paterno} {u?.apellido_materno}
                 </p>
             </div>
-            <div>
-                <h1></h1>
-                <img height="200" src="/banner.png" />
+            <div className="container-image">
+                <img max-height="200"  src="/banner.png" />
             </div>
             <div className="d-flex justify-content-end">
                 <button
@@ -65,8 +65,8 @@ export const Home = () => {
                     onClick={onCrearTest}
                 >Crear nuevo test</button>
             </div>
-            <div>
-                <table className="table">
+            <div class="table-responsive-md">
+                <table className="table table table-sm">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
